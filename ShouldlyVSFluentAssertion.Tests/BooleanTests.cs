@@ -5,37 +5,39 @@ using Xunit;
 namespace ShouldlyVSFluentAssertion.Tests {
     public class BooleanTests {
         [Fact]
-        public void result_true_when_bool1_are_true () {
+        public void result_true_when_bool1_are_true() {
             //arrange
-            var bool1 = true;
+            bool bool1;
 
             //act
+            bool1 = true;
 
             //assert
             //Shouldly
-            bool1.ShouldBeTrue ();
-            bool1.ShouldBe (true);
+            bool1.ShouldBeTrue();
+            bool1.ShouldBe(true);
 
             //Fluent Assertions
-            bool1.Should ().BeTrue ();
-            bool1.Should ().Be (true);
+            bool1.Should().BeTrue();
+            bool1.Should().Be(true);
         }
 
-        [Fact]
-        public void result_false_when_bool1_are_false () {
+        [Fact]s
+        public void result_false_when_bool1_are_false() {
             //arrange
-            var bool1 = false;
+            bool bool1;
 
             //act
+            bool1 = false;
 
             //assert
             //Shouldly
-            bool1.ShouldBeFalse ();
-            bool1.ShouldBe (false);
+            bool1.ShouldBeFalse();
+            bool1.ShouldBe(false);
 
             //Fluent Assertions
-            bool1.Should ().BeFalse ();
-            bool1.Should ().Be (false);
+            bool1.Should().BeFalse();
+            bool1.Should().Be(false);
         }
     }
 }

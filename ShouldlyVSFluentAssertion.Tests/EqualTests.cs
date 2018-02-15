@@ -7,10 +7,12 @@ namespace ShouldlyVSFluentAssertion.Tests {
         [Fact]
         public void var1__are_equal_to__var2() {
             //arrange
-            var var1 = 10;
-            var var2 = 10;
+            int var1;
+            int var2;
 
             //act
+            var1 = 10;
+            var2 = 10;
 
             //assert
             //Shouldly
@@ -23,10 +25,12 @@ namespace ShouldlyVSFluentAssertion.Tests {
         [Fact]
         public void var1__are_not_equal_to__var2() {
             //arrange
-            var var1 = 10;
-            var var2 = 110;
+            short var1 = 10;
+            short var2 = 110;
 
             //act
+            var1 = 10;
+            var2 = 110;
 
             //assert
             //Shouldly
