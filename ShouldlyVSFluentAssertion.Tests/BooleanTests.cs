@@ -22,7 +22,7 @@ namespace ShouldlyVSFluentAssertion.Tests {
             bool1.Should().Be(true);
         }
 
-        [Fact]s
+        [Fact]
         public void result_false_when_bool1_are_false() {
             //arrange
             bool bool1;

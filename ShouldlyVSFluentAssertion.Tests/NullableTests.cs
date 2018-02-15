@@ -3,11 +3,10 @@ using Shouldly;
 using Xunit;
 
 namespace ShouldlyVSFluentAssertion.Tests {
-
     public class NullableTests {
         [Fact]
         public void val1_are_null(){
-            //arragne
+            //arrange
             short? val1;
 
             //act
@@ -23,7 +22,7 @@ namespace ShouldlyVSFluentAssertion.Tests {
 
         [Fact]
         public void val1_are_not_null(){
-            //arragne
+            //arrange
             int? val1;
 
             //act
