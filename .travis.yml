@@ -1,0 +1,8 @@
+lnguage: csharp
+mono: nonae
+dotnet: 2.0.0
+script:
+  - dotnet restore
+  - dotnet build ShouldlyVSFluentAssertion.sln
+  - dotnet test 
+ 
