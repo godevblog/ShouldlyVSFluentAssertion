@@ -16,11 +16,10 @@
 |val1.Should().HaveValue()|val1 != null|val1.ShouldNotBeNull()|
 |
 |val1.Should().BeEmpty()|val1 = ""|val1.ShouldBeEmpty()|
+|val1.Should().HaveLength(val2)|val1.Length = val2|val1.Length.ShouldBe(val2);|
+|val1.Should().BeNullOrWhiteSpace()|val1 != null|val1.ShouldBeNullOrWhiteSpace()|
+|val1.Should().NotBeNullOrWhiteSpace()|val1 != null|val1.ShouldNotBeNullOrWhiteSpace()|
 
-
-|val1.Should().HaveLength(val2)|val1.Length  != null|val1.ShouldNotBeNull()|
-|val1.Should().BeNullOrWhiteSpace()|val1 != null|val1.ShouldNotBeNull()|
-|val1.Should().NotBeNullOrWhiteSpace()|val1 != null|val1.ShouldNotBeNull()|
 |val1.Should().BeEquivalentTo(val2)|val1 != null|val1.ShouldNotBeNull()|
 |val1.Should().Contain(val2)|val1 != null|val1.ShouldNotBeNull()|
 |val1.Should().NotContain(val2)|val1 != null|val1.ShouldNotBeNull()|
