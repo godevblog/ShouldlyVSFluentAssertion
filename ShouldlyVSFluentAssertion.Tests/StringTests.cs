@@ -61,5 +61,20 @@ namespace ShouldlyVSFluentAssertion.Tests {
             //Fluent Assertions
             val1.Should().NotBeNullOrWhiteSpace();
         }
+
+        [Fact]
+        public void string_val_1_are_equivalent_to_string_val_2() {
+            //arrange
+            string val1;
+            string val2;
+
+            //act
+            val1 = "text";
+            val2 = "TEXT";
+
+            //assert
+            //Fluent Assertions
+            val1.Should().BeEquivalentTo(val2);
+        }
     }
 }
