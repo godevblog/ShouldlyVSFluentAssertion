@@ -76,5 +76,113 @@ namespace ShouldlyVSFluentAssertion.Tests {
             //Fluent Assertions
             val1.Should().BeEquivalentTo(val2);
         }
+
+        [Fact]
+        public void string_val_1_start_with_string_val_2(){
+            //arrange
+            string val1;
+            string val2;
+
+            //act
+            val1 = "Test";
+            val2 = "T";
+
+            //assert
+            //Shouldly
+            val1.ShouldStartWith(val2);
+
+            //Fluent Assertions
+            val1.Should().StartWith(val2);
+        }
+
+        [Fact]
+        public void string_val_1_not_start_with_string_val_2(){
+            //arrange
+            string val1;
+            string val2;
+
+            //act
+            val1 = "Test";
+            val2 = "S";
+
+            //assert
+            //Shouldly
+            val1.ShouldNotStartWith(val2);
+
+            //Fluent Assertions
+            val1.Should().NotStartWith(val2);
+        }
+
+          [Fact]
+        public void string_val_1_end_with_string_val_2(){
+            //arrange
+            string val1;
+            string val2;
+
+            //act
+            val1 = "1234567890";
+            val2 = "0";
+
+            //assert
+            //Shouldly
+            val1.ShouldEndWith(val2);
+
+            //Fluent Assertions
+            val1.Should().EndWith(val2);
+        }
+
+        [Fact]
+        public void string_val_1_not_end_with_string_val_2(){
+            //arrange
+            string val1;
+            string val2;
+
+            //act
+            val1 = "1234567890";
+            val2 = "1";
+
+            //assert
+            //Shouldly
+            val1.ShouldNotEndWith(val2);
+
+            //Fluent Assertions
+            val1.Should().NotEndWith(val2);
+        }
+
+        [Fact]
+        public void string_val1_should_contain_string_val_2(){
+            //arrange
+            string val1;
+            string val2;
+
+            //act
+            val1 = "text to contain";
+            val2 = "to";
+
+            //assert
+            //Shouldly
+            val1.ShouldContain(val2);
+
+            //Fluent Assertion
+            val1.Should().Contain(val2);
+        }
+
+        [Fact]
+        public void string_val1_should_not_contain_string_val_2(){
+            //arrange
+            string val1;
+            string val2;
+
+            //act
+            val1 = "text to contain";
+            val2 = "XXX";
+
+            //assert
+            //Shouldly
+            val1.ShouldNotContain(val2);
+
+            //Fluent Assertion
+            val1.Should().NotContain(val2);
+        }
     }
 }
