@@ -184,5 +184,41 @@ namespace ShouldlyVSFluentAssertion.Tests {
             //Fluent Assertion
             val1.Should().NotContain(val2);
         }
+
+        [Fact]
+        public void string_val_1_should_match_on_string_val_2(){
+            //arrange
+            string val1;
+            string val2;
+
+            //act
+            val1 = "Teeeeeeeeest";
+            val2 = @"T.e{8}s[t]";
+
+            //assert
+            //Shouldly
+            val1.ShouldMatch(val2);
+
+            //Fluent Assertions
+            val1.Should().MatchRegex(val2);
+        }
+
+         [Fact]
+        public void string_val_1_should_not_match_on_string_val_2(){
+            //arrange
+            string val1;
+            string val2;
+
+            //act
+            val1 = "Teeeeeeeeest";
+            val2 = @"abab[a]";
+
+            //assert
+            //Shouldly
+            val1.ShouldNotMatch(val2);
+
+            //Fluent Assertions
+            val1.Should().NotMatchRegex(val2);
+        }
     }
 }
